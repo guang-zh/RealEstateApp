@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="848.0" prefWidth="1095.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.realestateapp.PropertiesController">
+   <children>
+      <Label alignment="TOP_CENTER" layoutX="142.0" layoutY="6.0" prefHeight="27.0" prefWidth="575.0" style="-fx-background-color: skyblue;" text="Real-Estate Manager: Properties" textFill="#0a0a0a" AnchorPane.leftAnchor="142.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tvProperties" layoutX="75.0" layoutY="27.0" prefHeight="601.0" prefWidth="1095.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="113.0" text="PropertyID" />
+          <TableColumn fx:id="colName" minWidth="0.0" prefWidth="104.0" text="PropertyName" />
+            <TableColumn fx:id="colType" prefWidth="183.0" text="PropertyType" />
+            <TableColumn fx:id="colOwner" prefWidth="236.0" text="PropertyOwner" />
+            <TableColumn fx:id="colAddress" prefWidth="306.0" text="PropertyAddress" />
+            <TableColumn fx:id="colPostalCode" prefWidth="152.0" text="PropertyPostalCode" />
+        </columns>
+      </TableView>
+      <SplitPane dividerPositions="0.34766697163769444" layoutX="193.0" layoutY="637.0" prefHeight="211.0" prefWidth="1095.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="637.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="280.0" prefWidth="228.0">
+               <children>
+                  <ImageView fitHeight="127.0" fitWidth="242.0" layoutX="50.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/Habitat67.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="56.0" layoutY="163.0" text="Habitat 67 - wikipedia" />
+                  <Button layoutX="189.0" layoutY="159.0" mnemonicParsing="false" text="Upload" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="265.0" prefWidth="481.0">
+               <children>
+                  <Label layoutX="69.0" layoutY="14.0" text="Property Name:">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="16.0" layoutY="58.0" text="Property ID:" />
+                  <TextField fx:id="tfID" layoutX="112.0" layoutY="54.0" prefHeight="25.0" prefWidth="46.0" text="1" />
+                  <TextField fx:id="tfAddress" layoutX="112.0" layoutY="132.0" prefHeight="25.0" prefWidth="261.0" text="2600 Av Pierre-Dupuy, Montréal, QC H3C 3R6" />
+                  <Label layoutX="16.0" layoutY="128.0" text="Address:" />
+                  <Label layoutX="278.0" layoutY="58.0" text="Property Type:" />
+                  <Label layoutX="14.0" layoutY="97.0" text="Property Owner:" />
+                  <TextField fx:id="tfType" layoutX="367.0" layoutY="54.0" prefHeight="25.0" prefWidth="66.0" text="Condo" />
+                  <TextField fx:id="tfOwner" layoutX="112.0" layoutY="93.0" text="Moshe Safdie" />
+                  <ButtonBar layoutX="29.0" layoutY="167.0" prefHeight="40.0" prefWidth="390.0">
+                     <buttons>
+                        <Button fx:id="btnInsert" mnemonicParsing="false" onAction="#handleButtonAction" text="Insert" />
+                        <Button fx:id="btnUpdate" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="247.0" text="Update" />
+                        <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#handleButtonAction" text="Delete" />
+                     </buttons>
+                  </ButtonBar>
+                  <Label layoutX="283.0" layoutY="97.0" text="Postal Code:" />
+                  <TextField fx:id="tfPostalCode" layoutX="367.0" layoutY="93.0" prefHeight="25.0" prefWidth="63.0" text="H3C3R6" />
+                  <TextField fx:id="tfName" layoutX="224.0" layoutY="17.0" prefHeight="25.0" prefWidth="100.0" text="Habitat 67" />
+                  <Button layoutX="501.0" layoutY="30.0" mnemonicParsing="false" text="Tenants Information" />
+                  <Button layoutX="501.0" layoutY="67.0" mnemonicParsing="false" text="Maintainance Information" />
+                  <Button layoutX="501.0" layoutY="102.0" mnemonicParsing="false" text="Mortgage Information" />
+                  <Button layoutX="501.0" layoutY="145.0" mnemonicParsing="false" text="Bank Information" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+      <Button fx:id="btnNavigation" layoutX="21.0" layoutY="1.0" mnemonicParsing="false" onAction="#switchToNavigation" text="Back to Navigation" />
+   </children>
+</AnchorPane>

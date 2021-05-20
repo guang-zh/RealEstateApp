@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="849.0" prefWidth="1095.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.realestateapp.LeasesController">
+   <children>
+      <Label alignment="TOP_CENTER" layoutX="137.0" layoutY="6.0" prefHeight="27.0" prefWidth="580.0" style="-fx-background-color: skyblue;" text="Real-Estate Manager: Leases" textFill="#0a0a0a" AnchorPane.leftAnchor="137.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tvLeases" layoutX="75.0" layoutY="27.0" prefHeight="514.0" prefWidth="1095.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="129.0" text="LeaseID" />
+          <TableColumn fx:id="colTid" minWidth="0.0" prefWidth="119.0" text="TenantID" />
+            <TableColumn fx:id="colStartdate" prefWidth="153.0" text="StartDate" />
+            <TableColumn fx:id="colEnddate" prefWidth="205.0" text="EndDate" />
+            <TableColumn fx:id="colPdf" prefWidth="242.0" text="PDF" />
+            <TableColumn fx:id="colPid" prefWidth="246.0" text="PropertyID" />
+        </columns>
+      </TableView>
+      <SplitPane dividerPositions="0.36322049405306495" layoutX="193.0" layoutY="556.0" prefHeight="293.0" prefWidth="1095.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="556.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="158.0" prefWidth="250.0">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="83.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/leaselogo.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="56.0" layoutY="206.0" />
+                  <Text layoutX="83.0" layoutY="202.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lease">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Text>
+                  <Button layoutX="197.0" layoutY="180.0" mnemonicParsing="false" text="Upload" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <Label layoutX="97.0" layoutY="31.0" text="Leases Information">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="20.0" layoutY="78.0" text="LeaseID:" />
+                  <TextField fx:id="tfId" layoutX="80.0" layoutY="74.0" text="6" />
+                  <TextField fx:id="tfPid" layoutX="78.0" layoutY="170.0" prefHeight="25.0" prefWidth="149.0" text="3" />
+                  <Label layoutX="17.0" layoutY="174.0" text="PropertyID:" />
+                  <Label layoutX="250.0" layoutY="78.0" text="TenantID:" />
+                  <Label layoutX="20.0" layoutY="120.0" text="StartDate:" />
+                  <TextField fx:id="tfTid" layoutX="318.0" layoutY="74.0" text="3" />
+                  <TextField fx:id="tfStartdate" layoutX="80.0" layoutY="116.0" text="2020-07-01" />
+                  <TextField fx:id="tfEnddate" layoutX="318.0" layoutY="116.0" text="2021-07-01" />
+                  <Label layoutX="251.0" layoutY="120.0" text="EndDate:" />
+                  <ButtonBar layoutX="16.0" layoutY="244.0" prefHeight="40.0" prefWidth="390.0">
+                    <buttons>
+                      <Button fx:id="btnInsert" mnemonicParsing="false" onAction="#handleButtonAction" text="Insert" />
+                        <Button fx:id="btnUpdate" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="247.0" text="Update" />
+                        <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#handleButtonAction" text="Delete" />
+                    </buttons>
+                  </ButtonBar>
+                  <Button layoutX="535.0" layoutY="170.0" mnemonicParsing="false" text="GetPDF" />
+                  <Button layoutX="529.0" layoutY="62.0" mnemonicParsing="false" text="Tenants Information" />
+                  <Button layoutX="529.0" layoutY="116.0" mnemonicParsing="false" text="Get Lease PDF" />
+                  <Label layoutX="250.0" layoutY="174.0" text="PDF location:" />
+                  <TextField fx:id="tfPdf" layoutX="320.0" layoutY="170.0" text="googledrive" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+      <Button fx:id="btnNavigation" layoutX="14.0" layoutY="2.0" mnemonicParsing="false" onAction="#switchToNavigation" text="Back to Navigation" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0" prefWidth="1095.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.realestateapp.MaintenanceController">
+   <children>
+      <Label alignment="TOP_CENTER" layoutX="137.0" layoutY="6.0" prefHeight="27.0" prefWidth="580.0" style="-fx-background-color: skyblue;" text="Real-Estate Manager: Maintenance" textFill="#0a0a0a" AnchorPane.leftAnchor="137.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tvMaintenances" layoutX="75.0" layoutY="27.0" prefHeight="524.0" prefWidth="1095.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="146.0" text="MaintenanceID" />
+          <TableColumn fx:id="colName" minWidth="0.0" prefWidth="183.0" text="MaintenanceName" />
+            <TableColumn fx:id="colCost" prefWidth="160.0" text="MaintenanceCost" />
+            <TableColumn fx:id="colContractor" prefWidth="229.0" text="Contractor" />
+            <TableColumn fx:id="colContractorphone" prefWidth="220.0" text="ContractorPhone" />
+            <TableColumn fx:id="colPid" prefWidth="156.0" text="PropertyID" />
+        </columns>
+      </TableView>
+      <SplitPane dividerPositions="0.3230769230769231" layoutX="193.0" layoutY="559.0" prefHeight="291.0" prefWidth="1095.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="559.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="158.0" prefWidth="250.0">
+               <children>
+                  <ImageView fitHeight="196.0" fitWidth="400.0" layoutX="44.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/renovationslogo.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="56.0" layoutY="206.0" />
+                  <Text layoutX="38.0" layoutY="249.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Maintenance">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Text>
+                  <Button layoutX="210.0" layoutY="227.0" mnemonicParsing="false" text="Upload" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <Label layoutX="97.0" layoutY="31.0" text="Maintenance Information">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="20.0" layoutY="78.0" text="Contractor Name:" />
+                  <TextField fx:id="tfContractor" layoutX="120.0" layoutY="75.0" text="Fix Everything" />
+                  <TextField fx:id="tfId" layoutX="111.0" layoutY="161.0" prefHeight="25.0" prefWidth="80.0" text="9" />
+                  <Label layoutX="17.0" layoutY="165.0" text="Maintenance ID:" />
+                  <Label layoutX="20.0" layoutY="120.0" text="Contractor Phone: " />
+                  <TextField fx:id="tfContractorphone" layoutX="120.0" layoutY="116.0" text="514-911-9191" />
+                  <TextField fx:id="tfCost" layoutX="397.0" layoutY="116.0" prefHeight="25.0" prefWidth="94.0" text="200" />
+                  <Label layoutX="342.0" layoutY="120.0" text="Cost:" />
+                  <ButtonBar layoutX="16.0" layoutY="244.0" prefHeight="40.0" prefWidth="390.0">
+                    <buttons>
+                      <Button fx:id="btnInsert" mnemonicParsing="false" onAction="#handleButtonAction" text="Insert" />
+                        <Button fx:id="btnUpdate" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="247.0" text="Update" />
+                        <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#handleButtonAction" text="Delete" />
+                    </buttons>
+                  </ButtonBar>
+                  <Label layoutX="279.0" layoutY="165.0" text="Maintenance Name:" />
+                  <TextField fx:id="tfName" layoutX="399.0" layoutY="161.0" prefHeight="25.0" prefWidth="91.0" text="Repair all" />
+                  <Button layoutX="552.0" layoutY="62.0" mnemonicParsing="false" text="Property Information" />
+                  <Label layoutX="333.0" layoutY="79.0" text="Property ID:" />
+                  <TextField fx:id="tfPid" layoutX="399.0" layoutY="75.0" prefHeight="25.0" prefWidth="94.0" text="5" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+      <Button fx:id="btnNavigation" layoutX="14.0" layoutY="2.0" mnemonicParsing="false" onAction="#switchToNavigation" text="Back to Navigation" />
+   </children>
+</AnchorPane>

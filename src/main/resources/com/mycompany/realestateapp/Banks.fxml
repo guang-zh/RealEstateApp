@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="851.0" prefWidth="1095.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.realestateapp.BanksController">
+   <children>
+      <Label alignment="TOP_CENTER" layoutX="137.0" layoutY="6.0" prefHeight="27.0" prefWidth="580.0" style="-fx-background-color: skyblue;" text="Real-Estate Manager: Banks" textFill="#0a0a0a" AnchorPane.leftAnchor="137.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tvBanks" layoutX="75.0" layoutY="27.0" prefHeight="520.0" prefWidth="1095.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="172.0" text="BankID" />
+          <TableColumn fx:id="colName" minWidth="0.0" prefWidth="188.0" text="BankName" />
+            <TableColumn fx:id="colInterestratedate" prefWidth="169.0" text="InterestRateDate" />
+            <TableColumn fx:id="colInterestrate" prefWidth="180.0" text="InterestRate" />
+            <TableColumn fx:id="colNotes" minWidth="0.0" prefWidth="221.0" text="Notes" />
+            <TableColumn fx:id="colPid" prefWidth="164.0" text="PropertyID" />
+        </columns>
+      </TableView>
+      <SplitPane dividerPositions="0.46294602012808783" layoutX="193.0" layoutY="554.0" prefHeight="297.0" prefWidth="1095.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="554.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="295.0" prefWidth="443.0">
+               <children>
+                  <ImageView fitHeight="216.0" fitWidth="295.0" layoutX="73.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/bmologo.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="56.0" layoutY="206.0" />
+                  <Text layoutX="79.0" layoutY="227.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BMO: Bank of Montreal">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Text>
+                  <Button layoutX="316.0" layoutY="206.0" mnemonicParsing="false" text="Upload" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="295.0" prefWidth="621.0">
+               <children>
+                  <Label layoutX="97.0" layoutY="31.0" text="Bank Information for Interest Rates">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="20.0" layoutY="78.0" text="BankID:" />
+                  <TextField fx:id="tfId" layoutX="129.0" layoutY="74.0" prefHeight="25.0" prefWidth="117.0" text="1" />
+                  <TextField fx:id="tfNotes" layoutX="97.0" layoutY="161.0" prefHeight="25.0" prefWidth="270.0" text="Prefer this bank" />
+                  <Label layoutX="17.0" layoutY="165.0" text="Notes:" />
+                  <Label layoutX="20.0" layoutY="120.0" text="Interest Date:" />
+                  <TextField fx:id="tfInterestratedate" layoutX="97.0" layoutY="116.0" text="2021-04-16" />
+                  <TextField fx:id="tfInterestrate" layoutX="377.0" layoutY="116.0" prefHeight="25.0" prefWidth="91.0" text="4.99" />
+                  <Label layoutX="283.0" layoutY="120.0" text="Interest Rate:" />
+                  <ButtonBar layoutX="16.0" layoutY="244.0" prefHeight="40.0" prefWidth="390.0">
+                    <buttons>
+                      <Button fx:id="btnInsert" mnemonicParsing="false" onAction="#handleButtonAction" text="Insert" />
+                        <Button fx:id="btnUpdate" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="247.0" text="Update" />
+                        <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#handleButtonAction" text="Delete" />
+                    </buttons>
+                  </ButtonBar>
+                  <Label layoutX="278.0" layoutY="78.0" text="Bank Name:" />
+                  <TextField fx:id="tfName" layoutX="380.0" layoutY="74.0" prefHeight="25.0" prefWidth="149.0" text="Bank of Montreal" />
+                  <Label layoutX="17.0" layoutY="201.0" text="PropertyID:" />
+                  <TextField fx:id="tfPid" layoutX="97.0" layoutY="197.0" prefHeight="25.0" prefWidth="40.0" text="2" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+      <Button fx:id="btnNavigation" layoutX="14.0" layoutY="2.0" mnemonicParsing="false" onAction="#switchToNavigation" text="Back to Navigation" />
+   </children>
+</AnchorPane>

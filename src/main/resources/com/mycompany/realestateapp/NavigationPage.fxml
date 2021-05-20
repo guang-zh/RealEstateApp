@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="881.0" prefWidth="1254.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.realestateapp.NavigationPageController">
+   <children>
+      <Label alignment="TOP_CENTER" layoutX="110.0" layoutY="16.0" style="-fx-background-color: skyblue;" text="Real-Estate Manager" textFill="#0a0a0a" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <SplitPane dividerPositions="0.4979020979020979" layoutX="1.0" layoutY="27.0" prefHeight="294.0" prefWidth="1269.0" AnchorPane.bottomAnchor="569.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="27.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="291.0" prefWidth="628.0">
+               <children>
+                  <ImageView fitHeight="185.0" fitWidth="450.0" layoutX="69.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/propertylogo.png" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="336.0" layoutY="88.0" mnemonicParsing="false" onAction="#switchToProperties" text="Properties">
+                     <font>
+                        <Font size="32.0" />
+                     </font></Button>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="97.0" prefWidth="303.0">
+               <children>
+                  <ImageView fitHeight="145.0" fitWidth="264.0" layoutX="33.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/tenantslogo.png" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="365.0" layoutY="111.0" mnemonicParsing="false" onAction="#switchToTenants" text="Tenants">
+                     <font>
+                        <Font size="32.0" />
+                     </font></Button>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+      <SplitPane dividerPositions="0.4979020979020979" layoutX="14.0" layoutY="344.0" prefHeight="249.0" prefWidth="1269.0" AnchorPane.bottomAnchor="297.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="344.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="495.0" prefWidth="631.0">
+               <children>
+                  <ImageView fitHeight="148.0" fitWidth="201.0" layoutX="79.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/renovationslogo.jpg" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="321.0" layoutY="89.0" mnemonicParsing="false" onAction="#switchToMaintenance" text="Maintenance">
+                     <font>
+                        <Font size="32.0" />
+                     </font></Button>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <ImageView fitHeight="115.0" fitWidth="228.0" layoutX="88.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/leaselogo.jpg" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="419.0" layoutY="92.0" mnemonicParsing="false" onAction="#switchToLeases" text="Leases">
+                     <font>
+                        <Font size="32.0" />
+                     </font></Button>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+      <SplitPane dividerPositions="0.5" layoutX="1.0" layoutY="605.0" prefHeight="267.0" prefWidth="1254.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="254.0" prefWidth="391.0">
+               <children>
+                  <ImageView fitHeight="102.0" fitWidth="164.0" layoutX="78.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/mortgagelogo.png" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="316.0" layoutY="90.0" mnemonicParsing="false" onAction="#switchToMortgages" text="Mortgages">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="277.0" prefWidth="552.0">
+               <children>
+                  <ImageView fitHeight="222.0" fitWidth="236.0" layoutX="80.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/bankinglogo.jpg" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="415.0" layoutY="110.0" mnemonicParsing="false" onAction="#switchToBanks" text="Banks">
+                     <font>
+                        <Font size="32.0" />
+                     </font></Button>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
